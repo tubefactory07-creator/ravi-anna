@@ -26,7 +26,7 @@ export default function About() {
         >
           <Tilt max={5} className="rounded-2xl">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl ring-1 ring-white/10">
-              <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_30%,#711F35,#1B1D25_60%,#08090C)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(80%_60%_at_50%_30%,#502D55,#25152F_60%,#0D0712)]" />
               <div className="absolute inset-0 opacity-50 [background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.03)_0px,rgba(255,255,255,0.03)_1px,transparent_1px,transparent_28px)]" />
               <img
                 src={profile.portrait.src}
@@ -36,13 +36,13 @@ export default function About() {
                 loading="lazy"
                 className="absolute bottom-0 left-1/2 h-[94%] w-auto max-w-none -translate-x-1/2 object-contain object-bottom"
               />
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#08090C]/95 via-[#08090C]/50 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0D0712]/95 via-[#0D0712]/50 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
                 <div>
-                  <p className="text-[10px] font-bold tracking-[0.3em] text-[#E53E55]">STARRING</p>
-                  <p className="font-display text-3xl leading-none text-[#F5F5F7]">{profile.displayName}</p>
+                  <p className="text-[10px] font-bold tracking-[0.3em] text-[#F6DBC0]">STARRING</p>
+                  <p className="font-display text-3xl leading-none text-[#F8F4E9]">{profile.displayName}</p>
                 </div>
-                <span className="rounded border border-white/30 px-1.5 text-[10px] font-bold text-[#F5F5F7]">S01–S05</span>
+                <span className="rounded border border-white/30 px-1.5 text-[10px] font-bold text-[#F8F4E9]">S01–S05</span>
               </div>
             </div>
           </Tilt>
@@ -51,7 +51,7 @@ export default function About() {
         {/* Right: Synopsis & Editorial Grid */}
         <div>
           <motion.p
-            className="font-serif text-[clamp(1.6rem,3.2vw,2.6rem)] italic leading-[1.18] text-[#F5F5F7]"
+            className="font-serif text-[clamp(1.6rem,3.2vw,2.6rem)] italic leading-[1.18] text-[#F8F4E9]"
             initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
             whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             viewport={{ once: true }}
@@ -59,7 +59,7 @@ export default function About() {
           >
             “{profile.intro}”
           </motion.p>
-          <p className="mt-4 text-sm text-[#A5A7B1]">— {profile.fullName}, {profile.role}</p>
+          <p className="mt-4 text-sm text-[#C7B8C4]">— {profile.fullName}, {profile.role}</p>
 
           <motion.dl
             className="mt-10 grid gap-px overflow-hidden rounded-xl bg-white/10 sm:grid-cols-2"
@@ -71,21 +71,21 @@ export default function About() {
             {facts.map((f) => (
               <motion.div
                 key={f.k}
-                className="bg-[#11131A] p-5"
+                className="bg-[#170D1E] p-5"
                 variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } } }}
               >
-                <dt className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#6B6D76]">{f.k}</dt>
-                <dd className="mt-2 text-base font-semibold text-[#F5F5F7]">{f.v}</dd>
-                <dd className="mt-0.5 text-xs text-[#A5A7B1]">{f.s}</dd>
+                <dt className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#7E6B7B]">{f.k}</dt>
+                <dd className="mt-2 text-base font-semibold text-[#F8F4E9]">{f.v}</dd>
+                <dd className="mt-0.5 text-xs text-[#C7B8C4]">{f.s}</dd>
               </motion.div>
             ))}
           </motion.dl>
 
           <div className="mt-8">
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.28em] text-[#6B6D76]">Technical Research & Interests</p>
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.28em] text-[#7E6B7B]">Technical Research & Interests</p>
             <div className="flex flex-wrap gap-2">
               {profile.interests.map((i) => (
-                <span key={i} className="glass rounded-full px-3 py-1.5 text-xs font-medium text-[#F5F5F7]">
+                <span key={i} className="glass rounded-full px-3 py-1.5 text-xs font-medium text-[#F8F4E9]">
                   {i}
                 </span>
               ))}

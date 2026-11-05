@@ -17,7 +17,7 @@ export default function Seasons() {
       <SectionHeading
         kicker={`${seasons.length} Seasons`}
         title="My Journey"
-        aside={<p className="max-w-xs text-sm text-[#A5A7B1]">Every era of engineering, told as a streaming season — select one to browse its episodes.</p>}
+        aside={<p className="max-w-xs text-sm text-[#C7B8C4]">Every era of engineering, told as a streaming season — select one to browse its episodes.</p>}
       />
 
       {/* Season selector */}
@@ -33,11 +33,11 @@ export default function Seasons() {
               rail.current?.scrollTo({ left: 0, behavior: 'smooth' });
             }}
             className={`relative shrink-0 rounded-full px-4 py-2.5 text-left transition ${
-              i === active ? 'text-[#08090C]' : 'text-[#A5A7B1] hover:text-[#F5F5F7]'
+              i === active ? 'text-[#0D0712]' : 'text-[#C7B8C4] hover:text-[#F8F4E9]'
             }`}
           >
             {i === active && (
-              <motion.span layoutId="season-pill" className="absolute inset-0 rounded-full bg-[#F5F5F7]" transition={{ duration: 0.5, ease: EASE }} />
+              <motion.span layoutId="season-pill" className="absolute inset-0 rounded-full bg-[#F8F4E9]" transition={{ duration: 0.5, ease: EASE }} />
             )}
             <span className="relative block text-[10px] font-bold tracking-[0.24em]">SEASON {String(s.number).padStart(2, '0')}</span>
             <span className="relative block whitespace-nowrap text-sm font-semibold">{s.title}</span>
@@ -54,15 +54,15 @@ export default function Seasons() {
           transition={{ duration: 0.55, ease: EASE }}
         >
           <div className="gutter mb-2 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-            <h3 className="font-display text-4xl tracking-wide text-[#F5F5F7] sm:text-5xl">
+            <h3 className="font-display text-4xl tracking-wide text-[#F8F4E9] sm:text-5xl">
               <span className="text-outline mr-3">S{String(season.number).padStart(2, '0')}</span>
               {season.title}
             </h3>
-            <span className="text-sm text-[#A5A7B1]">
+            <span className="text-sm text-[#C7B8C4]">
               {season.period} · {season.episodes.length} {season.episodes.length === 1 ? 'Episode' : 'Episodes'}
             </span>
           </div>
-          <p className="gutter max-w-3xl text-[15px] leading-relaxed text-[#F5F5F7]/75">{season.synopsis}</p>
+          <p className="gutter max-w-3xl text-[15px] leading-relaxed text-[#F8F4E9]/75">{season.synopsis}</p>
 
           <div className="group/rail relative">
             <div ref={rail} className="rail gutter flex snap-x snap-mandatory gap-4 overflow-x-auto py-8 [perspective:1200px]">

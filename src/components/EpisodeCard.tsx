@@ -15,7 +15,7 @@ export default function EpisodeCard({ episode, index }: { episode: Episode; inde
       transition={{ duration: 0.7, delay: index * 0.1, ease: EASE }}
     >
       <Tilt max={7} className="group h-full rounded-xl">
-        <div className="flex h-full flex-col overflow-hidden rounded-xl bg-[#11131A] ring-1 ring-white/10 transition duration-500 group-hover:ring-[#E53E55]/60">
+        <div className="flex h-full flex-col overflow-hidden rounded-xl bg-[#170D1E] ring-1 ring-white/10 transition duration-500 group-hover:ring-[#B2668F]/60">
           <div className="relative aspect-video overflow-hidden">
             <div className="absolute inset-0 transition-transform duration-[1.2s] ease-[var(--ease-cine)] group-hover:scale-110">
               <PosterBackdrop palette={episode.palette}>
@@ -23,24 +23,24 @@ export default function EpisodeCard({ episode, index }: { episode: Episode; inde
               </PosterBackdrop>
             </div>
             <div className="absolute left-4 top-4 flex items-center gap-2">
-              <span className="rounded bg-black/60 px-2 py-0.5 text-[10px] font-bold tracking-[0.2em] text-[#F5F5F7] backdrop-blur">{season}</span>
-              <span className="text-[10px] font-bold tracking-[0.2em] text-[#F5F5F7]/80">EPISODE {ep.replace('E', '')}</span>
+              <span className="rounded bg-black/60 px-2 py-0.5 text-[10px] font-bold tracking-[0.2em] text-[#F8F4E9] backdrop-blur">{season}</span>
+              <span className="text-[10px] font-bold tracking-[0.2em] text-[#F8F4E9]/80">EPISODE {ep.replace('E', '')}</span>
             </div>
-            <h4 className="absolute bottom-4 left-4 right-4 font-display text-3xl leading-none tracking-wide text-[#F5F5F7] [transform:translateZ(30px)] sm:text-4xl">
+            <h4 className="absolute bottom-4 left-4 right-4 font-display text-3xl leading-none tracking-wide text-[#F8F4E9] [transform:translateZ(30px)] sm:text-4xl">
               {episode.title}
             </h4>
           </div>
           <div className="flex flex-1 flex-col p-4">
-            <div className="mb-2 flex items-center justify-between text-[11px] text-[#6B6D76]">
-              <span className="font-semibold text-[#A5A7B1]">{episode.runtime}</span>
-              <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 text-[10px] text-[#F5F5F7] transition group-hover:border-[#F5F5F7] group-hover:bg-[#F5F5F7] group-hover:text-[#08090C]">
+            <div className="mb-2 flex items-center justify-between text-[11px] text-[#7E6B7B]">
+              <span className="font-semibold text-[#C7B8C4]">{episode.runtime}</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 text-[10px] text-[#F8F4E9] transition group-hover:border-[#F8F4E9] group-hover:bg-[#F8F4E9] group-hover:text-[#0D0712]">
                 ▶
               </span>
             </div>
-            <p className="text-sm leading-relaxed text-[#F5F5F7]/80">{episode.description}</p>
+            <p className="text-sm leading-relaxed text-[#F8F4E9]/80">{episode.description}</p>
             <div className="mt-auto flex flex-wrap gap-1.5 pt-4">
               {episode.tags.map((t) => (
-                <span key={t} className="rounded-full bg-white/[0.06] px-2.5 py-1 text-[11px] text-[#A5A7B1]">
+                <span key={t} className="rounded-full bg-white/[0.06] px-2.5 py-1 text-[11px] text-[#C7B8C4]">
                   {t}
                 </span>
               ))}

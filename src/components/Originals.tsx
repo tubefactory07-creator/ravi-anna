@@ -20,14 +20,14 @@ export default function Originals({ onOpen }: { onOpen: (p: Project) => void }) 
 function Intro() {
   return (
     <div className="flex w-full shrink-0 flex-col justify-center lg:w-[34vw]">
-      <p className="mb-3 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#E53E55]">
-        <span className="h-px w-8 bg-[#E53E55]" /> {projects.length} Productions · 2024–2026
+      <p className="mb-3 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#B2668F]">
+        <span className="h-px w-8 bg-[#B2668F]" /> {projects.length} Productions · 2024–2026
       </p>
-      <RevealText as="h2" text="ORIGINALS" className="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.85] text-[#F5F5F7]" />
-      <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-[#A5A7B1]">
+      <RevealText as="h2" text="ORIGINALS" className="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.85] text-[#F8F4E9]" />
+      <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-[#C7B8C4]">
         Five production systems — distributed streaming, multi-agent AI, global edge retail, GPU financial charting, and embedded vectors. Select any title for the complete architecture.
       </p>
-      <p className="mt-6 hidden text-xs tracking-[0.24em] text-[#6B6D76] lg:block">SCROLL TO BROWSE →</p>
+      <p className="mt-6 hidden text-xs tracking-[0.24em] text-[#7E6B7B] lg:block">SCROLL TO BROWSE →</p>
     </div>
   );
 }
@@ -39,13 +39,13 @@ function Outro() {
       target="_blank"
       rel="noreferrer"
       data-cursor="link"
-      className="group flex aspect-[3/4] w-[70vw] shrink-0 snap-start flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-white/15 text-center transition hover:border-[#E53E55]/60 sm:w-[44vw] lg:aspect-auto lg:h-[66vh] lg:w-[24vw]"
+      className="group flex aspect-[3/4] w-[70vw] shrink-0 snap-start flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-white/15 text-center transition hover:border-[#B2668F]/60 sm:w-[44vw] lg:aspect-auto lg:h-[66vh] lg:w-[24vw]"
     >
-      <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/25 text-2xl text-[#F5F5F7] transition group-hover:scale-110 group-hover:border-[#E53E55] group-hover:text-[#E53E55]">
+      <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/25 text-2xl text-[#F8F4E9] transition group-hover:scale-110 group-hover:border-[#B2668F] group-hover:text-[#B2668F]">
         ↗
       </span>
-      <span className="font-display text-3xl tracking-wide text-[#F5F5F7]">More on GitHub</span>
-      <span className="text-xs text-[#A5A7B1]">github.com/ravi-rajan</span>
+      <span className="font-display text-3xl tracking-wide text-[#F8F4E9]">More on GitHub</span>
+      <span className="text-xs text-[#C7B8C4]">github.com/ravi-rajan</span>
     </a>
   );
 }
@@ -81,7 +81,7 @@ function PinnedOriginals({ onOpen }: { onOpen: (p: Project) => void }) {
   return (
     <div ref={wrap} style={{ height: `calc(100vh + ${dist}px)` }} className="relative">
       <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden">
-        <div aria-hidden className="absolute inset-0 bg-[radial-gradient(50%_60%_at_70%_50%,rgba(183,47,67,0.12),transparent_70%)]" />
+        <div aria-hidden className="absolute inset-0 bg-[radial-gradient(50%_60%_at_70%_50%,rgba(147,80,115,0.2),transparent_70%)]" />
         <motion.div ref={track} style={{ x }} className="gutter relative flex items-center gap-8 pr-[12vw]" data-cursor="drag">
           <Intro />
           {projects.map((p, i) => (
@@ -90,9 +90,9 @@ function PinnedOriginals({ onOpen }: { onOpen: (p: Project) => void }) {
           <Outro />
         </motion.div>
         <div className="gutter absolute inset-x-0 bottom-8 flex items-center gap-4">
-          <span className="text-[10px] font-bold tracking-[0.3em] text-[#6B6D76]">ORIGINALS</span>
+          <span className="text-[10px] font-bold tracking-[0.3em] text-[#7E6B7B]">ORIGINALS</span>
           <div className="h-[2px] flex-1 overflow-hidden rounded bg-white/10">
-            <motion.div className="h-full origin-left bg-[#B72F43]" style={{ scaleX: bar }} />
+            <motion.div className="h-full origin-left bg-[#935073]" style={{ scaleX: bar }} />
           </div>
         </div>
       </div>

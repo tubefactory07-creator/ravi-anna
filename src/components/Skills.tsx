@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { skillCategories, skillEvidence, type Skill } from '../data/portfolio';
 import { EASE, SectionHeading } from './fx';
 
-const HUES = ['#E53E55', '#38BDF8', '#10B981', '#F59E0B', '#A855F7', '#EC4899', '#06B6D4'];
+const HUES = ['#935073', '#F6DBC0', '#B2668F', '#C48CB3', '#D8A0C2', '#EAD0B8', '#A2678A'];
 
 export default function Skills() {
   const [cat, setCat] = useState(0);
@@ -17,7 +17,7 @@ export default function Skills() {
       <SectionHeading
         kicker="Genres"
         title="My Skill Universe"
-        aside={<p className="max-w-xs text-sm text-[#A5A7B1]">Hover or tap a skill to see where it shows up across projects, experience, and certifications.</p>}
+        aside={<p className="max-w-xs text-sm text-[#C7B8C4]">Hover or tap a skill to see where it shows up across projects, experience, and certifications.</p>}
       />
 
       <div className="gutter grid gap-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-14">
@@ -35,7 +35,7 @@ export default function Skills() {
               aria-selected={i === cat}
               onClick={() => setCat(i)}
               className={`group relative shrink-0 rounded-lg px-4 py-3 text-left transition lg:px-5 ${
-                i === cat ? 'text-[#F5F5F7]' : 'text-[#6B6D76] hover:text-[#F5F5F7]'
+                i === cat ? 'text-[#F8F4E9]' : 'text-[#7E6B7B] hover:text-[#F8F4E9]'
               }`}
             >
               {i === cat && (
@@ -45,7 +45,7 @@ export default function Skills() {
                 <motion.span layoutId="skill-bar" className="absolute bottom-2 left-0 top-2 hidden w-[3px] rounded lg:block" style={{ background: hue }} />
               )}
               <span className="relative block font-display text-2xl tracking-wide lg:text-3xl">{c.title}</span>
-              <span className="relative hidden text-xs text-[#6B6D76] lg:block">
+              <span className="relative hidden text-xs text-[#7E6B7B] lg:block">
                 {c.skills.length} skills · {c.subtitle}
               </span>
             </button>
@@ -57,10 +57,10 @@ export default function Skills() {
           <AnimatePresence mode="wait">
             <motion.div key={category.id} initial="hidden" animate="show" exit="exit" transition={{ staggerChildren: 0.05 }}>
               <motion.p
-                className="mb-5 text-sm text-[#A5A7B1]"
+                className="mb-5 text-sm text-[#C7B8C4]"
                 variants={{ hidden: { opacity: 0 }, show: { opacity: 1 }, exit: { opacity: 0 } }}
               >
-                <span className="font-semibold text-[#F5F5F7]">{category.title}</span> — {category.subtitle}
+                <span className="font-semibold text-[#F8F4E9]">{category.title}</span> — {category.subtitle}
               </motion.p>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-3">
                 {category.skills.map((s) => (
@@ -92,7 +92,7 @@ function SkillCard({ skill, hue }: { skill: Skill; hue: string }) {
         exit: { opacity: 0, y: -12, transition: { duration: 0.2 } },
       }}
       whileHover={{ y: -6 }}
-      className="group relative flex min-h-[148px] flex-col overflow-hidden rounded-xl bg-[#11131A] p-4 text-left ring-1 ring-white/10 transition-shadow duration-500 hover:ring-white/20"
+      className="group relative flex min-h-[148px] flex-col overflow-hidden rounded-xl bg-[#170D1E] p-4 text-left ring-1 ring-white/10 transition-shadow duration-500 hover:ring-white/20"
       style={{ boxShadow: open ? `0 18px 50px -12px ${hue}55, 0 0 0 1px ${hue}66` : undefined }}
     >
       <div
@@ -109,10 +109,10 @@ function SkillCard({ skill, hue }: { skill: Skill; hue: string }) {
       >
         {skill.mono}
       </motion.span>
-      <span className="relative mt-4 flex items-center gap-2 text-[15px] font-semibold text-[#F5F5F7]">
+      <span className="relative mt-4 flex items-center gap-2 text-[15px] font-semibold text-[#F8F4E9]">
         {skill.name}
         {skill.note && (
-          <span className="rounded px-1.5 py-px text-[9px] font-bold uppercase tracking-wider text-[#08090C]" style={{ background: hue }}>
+          <span className="rounded px-1.5 py-px text-[9px] font-bold uppercase tracking-wider text-[#0D0712]" style={{ background: hue }}>
             {skill.note}
           </span>
         )}
@@ -120,7 +120,7 @@ function SkillCard({ skill, hue }: { skill: Skill; hue: string }) {
       <AnimatePresence initial={false}>
         {open && evidence && (
           <motion.span
-            className="relative mt-2 block text-[11px] leading-snug text-[#A5A7B1]"
+            className="relative mt-2 block text-[11px] leading-snug text-[#C7B8C4]"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}

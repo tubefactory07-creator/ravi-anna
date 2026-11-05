@@ -107,11 +107,11 @@ export type Project = {
   motif: 'stream' | 'agents' | 'edge' | 'telemetry' | 'vector';
 };
 
-const crimsonPalette: Palette = { from: '#1a0509', via: '#711f35', to: '#08090c', accent: '#b72f43' };
-const amberPalette: Palette = { from: '#1a1005', via: '#6b3c06', to: '#08090c', accent: '#f59e0b' };
-const oceanPalette: Palette = { from: '#04121f', via: '#0f4c6e', to: '#08090c', accent: '#38bdf8' };
-const violetPalette: Palette = { from: '#120822', via: '#4c1d95', to: '#08090c', accent: '#a855f7' };
-const emeraldPalette: Palette = { from: '#03150f', via: '#065f46', to: '#08090c', accent: '#10b981' };
+const crimsonPalette: Palette = { from: '#25112B', via: '#502D55', to: '#0D0712', accent: '#935073' };
+const amberPalette: Palette = { from: '#2A1726', via: '#733B58', to: '#0D0712', accent: '#F6DBC0' };
+const oceanPalette: Palette = { from: '#150F2C', via: '#3F285C', to: '#0D0712', accent: '#C48CB3' };
+const violetPalette: Palette = { from: '#1E0E28', via: '#502D55', to: '#0D0712', accent: '#B2668F' };
+const emeraldPalette: Palette = { from: '#181228', via: '#46274D', to: '#0D0712', accent: '#EAD0B8' };
 
 export const projects: Project[] = [
   {
@@ -681,28 +681,28 @@ export const viewerProfiles: {
     id: 'ravi',
     name: "Ravi's Cut",
     blurb: 'The director’s cut — full series in narrative order',
-    color: '#b72f43',
+    color: '#935073',
     order: ['about', 'journey', 'originals', 'picks', 'skills', 'moments', 'story'],
   },
   {
     id: 'recruiter',
     name: 'Talent Scout',
     blurb: 'Fast track — resume, achievements & verified skills first',
-    color: '#38bdf8',
+    color: '#C48CB3',
     order: ['story', 'moments', 'skills', 'originals', 'about', 'journey', 'picks'],
   },
   {
     id: 'developer',
     name: 'Systems Architect',
     blurb: 'Deep technical — architecture, originals & code first',
-    color: '#10b981',
+    color: '#B2668F',
     order: ['originals', 'skills', 'journey', 'moments', 'about', 'picks', 'story'],
   },
   {
     id: 'creative',
     name: 'Design & Vision',
     blurb: 'The journey arc, top picks & cinematic highlights first',
-    color: '#f59e0b',
+    color: '#F6DBC0',
     order: ['journey', 'picks', 'originals', 'moments', 'about', 'skills', 'story'],
   },
 ];

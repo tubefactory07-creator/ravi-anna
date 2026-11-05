@@ -119,7 +119,7 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
           className="h-[88vh] w-auto max-w-none object-contain [mask-image:linear-gradient(to_bottom,black_60%,transparent)]"
         />
       </motion.div>
-      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_45%,rgba(183,47,67,0.32),transparent_70%)]" />
+      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_45%,rgba(147,80,115,0.35),transparent_70%)]" />
 
       {/* Progress bars */}
       {phase !== 'zoom' && (
@@ -127,7 +127,7 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
           {introSlides.map((s, i) => (
             <div key={s.kicker} className="h-[3px] flex-1 overflow-hidden rounded bg-white/15">
               <motion.div
-                className="h-full origin-left bg-[#F5F5F7]"
+                className="h-full origin-left bg-[#F8F4E9]"
                 style={{ scaleX: i === index && phase === 'reel' ? progress : i < index || phase === 'end' ? 1 : 0 }}
               />
             </div>
@@ -147,17 +147,17 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
               exit={{ opacity: 0, scale: 0.96, filter: 'blur(10px)' }}
               transition={{ duration: 0.7, ease: EASE }}
             >
-              <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.5em] text-[#E53E55] sm:text-xs">
+              <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.5em] text-[#F6DBC0] sm:text-xs">
                 Episode {String(index + 1).padStart(2, '0')} · {slide.kicker}
               </p>
-              <h2 className="font-display leading-[0.88] text-[#F5F5F7]" style={{ fontSize: 'clamp(3rem, 10vw, 8.5rem)' }}>
+              <h2 className="font-display leading-[0.88] text-[#F8F4E9]" style={{ fontSize: 'clamp(3rem, 10vw, 8.5rem)' }}>
                 {slide.title}
               </h2>
               <div className="mt-6 space-y-2">
                 {slide.lines.map((l, i) => (
                   <motion.p
                     key={l}
-                    className="text-base text-[#F5F5F7]/85 sm:text-xl"
+                    className="text-base text-[#F8F4E9]/85 sm:text-xl"
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.35 + i * 0.15, duration: 0.6, ease: EASE }}
@@ -171,7 +171,7 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
                   {slide.chips.map((c, i) => (
                     <motion.span
                       key={c}
-                      className="glass rounded-full px-3 py-1 text-xs font-semibold tracking-wide text-[#F5F5F7]"
+                      className="glass rounded-full px-3 py-1 text-xs font-semibold tracking-wide text-[#F8F4E9]"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.6 + i * 0.06 }}
@@ -190,8 +190,8 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
               animate={{ opacity: 1, letterSpacing: '0.2em' }}
               transition={{ duration: 1.2, ease: EASE }}
             >
-              <p className="font-display text-5xl text-[#F5F5F7] sm:text-7xl">NOW STREAMING</p>
-              <p className="mt-3 text-xs font-semibold tracking-[0.4em] text-[#A5A7B1]">{profile.displayName.toUpperCase()}</p>
+              <p className="font-display text-5xl text-[#F8F4E9] sm:text-7xl">NOW STREAMING</p>
+              <p className="mt-3 text-xs font-semibold tracking-[0.4em] text-[#C7B8C4]">{profile.displayName.toUpperCase()}</p>
             </motion.div>
           )}
         </AnimatePresence>
@@ -213,18 +213,18 @@ export default function PlayIntro({ onClose }: { onClose: () => void }) {
               type="button"
               onClick={() => setPaused((p) => !p)}
               aria-label={paused ? 'Resume' : 'Pause'}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-[#F5F5F7] transition hover:bg-white/10"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-[#F8F4E9] transition hover:bg-white/10"
             >
               {paused ? '▶' : '❚❚'}
             </button>
           )}
-          <span className="hidden text-[11px] tracking-[0.2em] text-[#6B6D76] sm:block">SPACE · ← → · ESC</span>
+          <span className="hidden text-[11px] tracking-[0.2em] text-[#7E6B7B] sm:block">SPACE · ← → · ESC</span>
         </div>
         <button
           type="button"
           onClick={onClose}
           data-cursor="close"
-          className="rounded-full bg-[#F5F5F7] px-5 py-2.5 text-xs font-bold tracking-[0.18em] text-[#08090C] transition hover:bg-white"
+          className="rounded-full bg-[#F8F4E9] px-5 py-2.5 text-xs font-bold tracking-[0.18em] text-[#0D0712] transition hover:bg-[#F6DBC0]"
         >
           BACK TO BROWSE
         </button>

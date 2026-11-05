@@ -30,8 +30,8 @@ export default function ContinueWatching({ order }: { order: SectionId[] }) {
   return (
     <section aria-labelledby="continue-title" className="relative z-10 -mt-10 pb-10 sm:-mt-16">
       <div className="gutter mb-4 flex items-end justify-between">
-        <RevealText as="h2" text="Continue Exploring" className="font-sans text-lg font-semibold tracking-tight text-[#F5F5F7] sm:text-2xl" />
-        <span className="hidden text-xs text-[#6B6D76] sm:block">Progress shows what you&apos;ve watched so far</span>
+        <RevealText as="h2" text="Continue Exploring" className="font-sans text-lg font-semibold tracking-tight text-[#F8F4E9] sm:text-2xl" />
+        <span className="hidden text-xs text-[#7E6B7B] sm:block">Progress shows what you&apos;ve watched so far</span>
       </div>
       <div className="group/rail relative">
         <div
@@ -60,7 +60,7 @@ export default function ContinueWatching({ order }: { order: SectionId[] }) {
                 animate={{ x: shift, scale: fine && hovered === i ? 1.08 : 1, zIndex: hovered === i ? 10 : 1 }}
                 transition={{ duration: 0.5, ease: EASE, delay: 0 }}
               >
-                <div className="relative h-full w-full overflow-hidden rounded-lg ring-1 ring-white/10 transition duration-500 group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.7),0_0_0_1px_rgba(229,62,85,0.6)]">
+                <div className="relative h-full w-full overflow-hidden rounded-lg ring-1 ring-white/10 transition duration-500 group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.7),0_0_0_1px_rgba(178,102,143,0.7)]">
                   <motion.div className="absolute inset-0" animate={{ scale: hovered === i ? 1.12 : 1 }} transition={{ duration: 0.8, ease: EASE }}>
                     <PosterBackdrop palette={meta.palette}>
                       <span className="absolute -right-2 -top-6 font-display text-[8rem] leading-none text-white/[0.07] sm:text-[9rem]">
@@ -69,23 +69,23 @@ export default function ContinueWatching({ order }: { order: SectionId[] }) {
                     </PosterBackdrop>
                   </motion.div>
                   <div className="absolute inset-0 flex flex-col justify-end p-4">
-                    <span className="mb-1 text-[10px] font-bold uppercase tracking-[0.3em] text-[#E53E55]">
+                    <span className="mb-1 text-[10px] font-bold uppercase tracking-[0.3em] text-[#F6DBC0]">
                       Episode {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span className="font-display text-2xl leading-none tracking-wide text-[#F5F5F7] transition-transform duration-500 group-hover:-translate-y-1 sm:text-3xl">
+                    <span className="font-display text-2xl leading-none tracking-wide text-[#F8F4E9] transition-transform duration-500 group-hover:-translate-y-1 sm:text-3xl">
                       {meta.card}
                     </span>
-                    <span className="mt-1 text-xs text-[#A5A7B1] opacity-100 transition duration-500 lg:translate-y-2 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
+                    <span className="mt-1 text-xs text-[#C7B8C4] opacity-100 transition duration-500 lg:translate-y-2 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
                       {meta.meta}
                     </span>
                   </div>
-                  <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-black/40 text-xs text-[#F5F5F7] backdrop-blur transition duration-500 group-hover:scale-110 group-hover:border-[#F5F5F7] group-hover:bg-[#F5F5F7] group-hover:text-[#08090C]">
+                  <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-black/40 text-xs text-[#F8F4E9] backdrop-blur transition duration-500 group-hover:scale-110 group-hover:border-[#F8F4E9] group-hover:bg-[#F8F4E9] group-hover:text-[#0D0712]">
                     ▶
                   </span>
                 </div>
                 {/* Real watch progress bar */}
                 <div className="mt-2 h-[3px] w-full overflow-hidden rounded bg-white/15">
-                  <motion.div className="h-full origin-left bg-[#B72F43]" animate={{ scaleX: Math.max(0.04, p) }} transition={{ duration: 0.6 }} />
+                  <motion.div className="h-full origin-left bg-gradient-to-r from-[#502D55] via-[#935073] to-[#F6DBC0]" animate={{ scaleX: Math.max(0.04, p) }} transition={{ duration: 0.6 }} />
                 </div>
               </motion.button>
             );

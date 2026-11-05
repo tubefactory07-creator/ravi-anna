@@ -59,7 +59,7 @@ export default function OpeningSequence({ onDone }: { onDone: () => void }) {
       <motion.div
         aria-hidden
         className="absolute inset-0"
-        style={{ background: 'radial-gradient(60% 50% at 50% 55%, rgba(183,47,67,0.24), transparent 70%)' }}
+        style={{ background: 'radial-gradient(60% 50% at 50% 55%, rgba(147,80,115,0.3), transparent 70%)' }}
         initial={{ opacity: 0 }}
         animate={{ opacity: beat >= 2 ? [0, 0.9, 0.5, 1] : 0 }}
         transition={{ duration: 1.4 }}
@@ -77,7 +77,7 @@ export default function OpeningSequence({ onDone }: { onDone: () => void }) {
             transition={{ duration: 0.6 }}
           >
             <motion.p
-              className="font-sans text-xs font-semibold text-[#A5A7B1] sm:text-sm"
+              className="font-sans text-xs font-semibold text-[#C7B8C4] sm:text-sm"
               initial={{ letterSpacing: '0.2em', opacity: 0 }}
               animate={{ letterSpacing: '0.6em', opacity: 1 }}
               transition={{ duration: 1.6, ease: EASE }}
@@ -103,12 +103,12 @@ export default function OpeningSequence({ onDone }: { onDone: () => void }) {
           className="h-full w-auto max-w-none object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_55%,transparent_98%)]"
         />
       </motion.div>
-      <div aria-hidden className="absolute inset-0 z-[1] bg-[radial-gradient(70%_60%_at_50%_40%,transparent_30%,rgba(8,9,12,0.85)_100%)]" />
+      <div aria-hidden className="absolute inset-0 z-[1] bg-[radial-gradient(70%_60%_at_50%_40%,transparent_30%,rgba(13,7,18,0.85)_100%)]" />
 
       {/* title: RAVI · THE SERIES */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center">
         <motion.h1
-          className="font-display leading-[0.82] text-[#F5F5F7] drop-shadow-[0_8px_40px_rgba(0,0,0,0.8)]"
+          className="font-display leading-[0.82] text-[#F8F4E9] drop-shadow-[0_8px_40px_rgba(0,0,0,0.8)]"
           style={{ fontSize: 'clamp(4.6rem, 20vw, 15rem)' }}
           initial={{ opacity: 0, scale: 1.3, filter: 'blur(20px)', letterSpacing: '0.5em' }}
           animate={beat >= 2 ? { opacity: 1, scale: 1, filter: 'blur(0px)', letterSpacing: '0.04em', y: beat >= 4 ? '-28vh' : 0 } : {}}
@@ -117,7 +117,7 @@ export default function OpeningSequence({ onDone }: { onDone: () => void }) {
           {profile.firstName}
         </motion.h1>
         <motion.p
-          className="font-sans text-sm font-bold text-[#E53E55] [text-shadow:0_2px_20px_rgba(0,0,0,0.9)] sm:text-lg"
+          className="font-sans text-sm font-bold text-[#F6DBC0] [text-shadow:0_2px_20px_rgba(0,0,0,0.9)] sm:text-lg"
           initial={{ opacity: 0, letterSpacing: '1.4em' }}
           animate={beat >= 3 ? { opacity: 1, letterSpacing: '0.7em', y: beat >= 4 ? '-28vh' : 0 } : {}}
           transition={{ duration: 1.1, ease: EASE }}
@@ -129,7 +129,7 @@ export default function OpeningSequence({ onDone }: { onDone: () => void }) {
       {/* role + play */}
       <div className="absolute inset-x-0 bottom-[9vh] z-20 flex flex-col items-center gap-6 px-4 text-center">
         <motion.p
-          className="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-[#F5F5F7]/90 sm:text-sm sm:tracking-[0.4em]"
+          className="font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-[#F8F4E9]/90 sm:text-sm sm:tracking-[0.4em]"
           initial={{ opacity: 0, y: 14 }}
           animate={beat >= 5 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: EASE }}
@@ -143,7 +143,7 @@ export default function OpeningSequence({ onDone }: { onDone: () => void }) {
               data-cursor="play"
               onClick={onDone}
               tabIndex={beat >= 6 ? 0 : -1}
-              className="group flex items-center gap-3 rounded-full bg-[#F5F5F7] px-9 py-4 font-sans text-base font-bold tracking-wide text-[#08090C] shadow-[0_0_60px_rgba(183,47,67,0.45)] transition hover:bg-white"
+              className="group flex items-center gap-3 rounded-full bg-[#F8F4E9] px-9 py-4 font-sans text-base font-bold tracking-wide text-[#0D0712] shadow-[0_0_60px_rgba(147,80,115,0.55)] transition hover:bg-[#F6DBC0]"
             >
               <span className="text-lg transition-transform group-hover:scale-125">▶</span> PLAY
             </button>
@@ -154,7 +154,7 @@ export default function OpeningSequence({ onDone }: { onDone: () => void }) {
       <button
         type="button"
         onClick={onDone}
-        className="absolute right-4 top-[calc(7vh+12px)] z-40 rounded-full border border-white/20 px-4 py-2 font-sans text-[11px] font-semibold tracking-[0.2em] text-[#A5A7B1] transition hover:border-white/60 hover:text-[#F5F5F7]"
+        className="absolute right-4 top-[calc(7vh+12px)] z-40 rounded-full border border-white/20 px-4 py-2 font-sans text-[11px] font-semibold tracking-[0.2em] text-[#C7B8C4] transition hover:border-white/60 hover:text-[#F8F4E9]"
       >
         SKIP INTRO
       </button>

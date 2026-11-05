@@ -30,12 +30,12 @@ export default function ResumeModal({ onClose }: { onClose: () => void }) {
       aria-label="Resume"
     >
       <div className="gutter flex h-16 shrink-0 items-center justify-between gap-3 pt-[env(safe-area-inset-top)]">
-        <p className="truncate font-display text-2xl tracking-wide text-[#F5F5F7]">The Screenplay Resume</p>
+        <p className="truncate font-display text-2xl tracking-wide text-[#F8F4E9]">The Screenplay Resume</p>
         <div className="flex items-center gap-2">
           <a
             href={profile.resumePdf}
             download="Ravi_Rajan_Resume.pdf"
-            className="rounded-md bg-[#F5F5F7] px-4 py-2 text-xs font-bold text-[#08090C] transition hover:bg-white"
+            className="rounded-md bg-[#F8F4E9] px-4 py-2 text-xs font-bold text-[#0D0712] transition hover:bg-[#F6DBC0]"
           >
             ⤓ Download PDF
           </a>
@@ -44,7 +44,7 @@ export default function ResumeModal({ onClose }: { onClose: () => void }) {
             onClick={onClose}
             aria-label="Close resume"
             data-cursor="close"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-[#F5F5F7] hover:bg-white/20"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-[#F8F4E9] hover:bg-white/20"
           >
             ✕
           </button>
@@ -63,13 +63,13 @@ export default function ResumeModal({ onClose }: { onClose: () => void }) {
               href={profile.resumePdf}
               target="_blank"
               rel="noreferrer"
-              className="glass mt-4 flex min-h-12 items-center justify-center rounded-md text-sm font-semibold text-[#F5F5F7]"
+              className="glass mt-4 flex min-h-12 items-center justify-center rounded-md text-sm font-semibold text-[#F8F4E9]"
             >
               Open original PDF ↗
             </a>
           </div>
         ) : (
-          <div data-lenis-prevent className="h-full overflow-y-auto rounded-xl ring-1 ring-white/10 p-2 bg-[#08090C]">
+          <div data-lenis-prevent className="h-full overflow-y-auto rounded-xl ring-1 ring-white/10 p-2 bg-[#0D0712]">
             <ResumeSheet />
           </div>
         )}

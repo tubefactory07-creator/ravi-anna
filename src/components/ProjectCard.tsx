@@ -44,28 +44,28 @@ export default function ProjectCard({
           </motion.div>
 
           <div className="absolute left-5 top-5 flex items-center gap-2 sm:left-7 sm:top-7">
-            <span className="font-display text-xl leading-none text-[#E53E55]">R</span>
-            <span className="text-[10px] font-bold tracking-[0.34em] text-[#F5F5F7]/80">ORIGINAL</span>
+            <span className="font-display text-xl leading-none text-[#B2668F]">R</span>
+            <span className="text-[10px] font-bold tracking-[0.34em] text-[#F8F4E9]/80">ORIGINAL</span>
           </div>
-          <span className="absolute right-5 top-5 rounded border border-white/30 px-1.5 py-px text-[10px] font-bold text-[#F5F5F7] sm:right-7 sm:top-7">
+          <span className="absolute right-5 top-5 rounded border border-white/30 px-1.5 py-px text-[10px] font-bold text-[#F8F4E9] sm:right-7 sm:top-7">
             {project.year}
           </span>
 
           <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7 [transform:translateZ(40px)]">
-            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A5A7B1]">{project.genre}</p>
-            <motion.h3 layoutId={`title-${project.id}`} className="font-display text-[clamp(2.4rem,5vw,4.6rem)] leading-[0.88] tracking-wide text-[#F5F5F7]">
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#C7B8C4]">{project.genre}</p>
+            <motion.h3 layoutId={`title-${project.id}`} className="font-display text-[clamp(2.4rem,5vw,4.6rem)] leading-[0.88] tracking-wide text-[#F8F4E9]">
               {project.title}
             </motion.h3>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-[#F5F5F7]/75 sm:text-[15px]">{project.logline}</p>
+            <p className="mt-3 max-w-md text-sm leading-relaxed text-[#F8F4E9]/75 sm:text-[15px]">{project.logline}</p>
             <div className="mt-4 flex flex-wrap gap-1.5">
               {project.stack.map((t) => (
-                <span key={t} className="rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-medium text-[#F5F5F7]/90 backdrop-blur">
+                <span key={t} className="rounded-full bg-black/40 px-2.5 py-1 text-[11px] font-medium text-[#F8F4E9]/90 backdrop-blur">
                   {t}
                 </span>
               ))}
             </div>
             <div className="mt-5 flex flex-wrap items-center gap-3">
-              <span className="flex min-h-11 items-center gap-2 rounded-md bg-[#F5F5F7] px-5 text-sm font-bold text-[#08090C] transition group-hover:bg-white">
+              <span className="flex min-h-11 items-center gap-2 rounded-md bg-[#F8F4E9] px-5 text-sm font-bold text-[#0D0712] transition group-hover:bg-[#F6DBC0]">
                 ▶ View Project
               </span>
               {project.github && (
@@ -75,7 +75,7 @@ export default function ProjectCard({
                   rel="noreferrer"
                   data-cursor="link"
                   onClick={(e) => e.stopPropagation()}
-                  className="flex min-h-11 items-center gap-2 rounded-md border border-white/25 bg-black/35 px-4 text-sm font-semibold text-[#F5F5F7] backdrop-blur transition hover:border-[#F5F5F7]"
+                  className="flex min-h-11 items-center gap-2 rounded-md border border-white/25 bg-black/35 px-4 text-sm font-semibold text-[#F8F4E9] backdrop-blur transition hover:border-[#F6DBC0]"
                 >
                   GitHub ↗
                 </a>

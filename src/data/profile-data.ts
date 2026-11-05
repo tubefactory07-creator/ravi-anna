@@ -211,8 +211,8 @@ export const profileData: ProfileData = {
       role: "Lead Systems Architect & Core Engineer",
       status: "Production Live",
       featured: true,
-      coverGradient: "from-rose-950/60 via-zinc-900 to-black",
-      accentColor: "#C43D4D",
+      coverGradient: "from-purple-950/60 via-zinc-900 to-black",
+      accentColor: "#935073",
       tags: ["Go", "Kafka", "ClickHouse", "Rust", "gRPC", "Prometheus"],
       links: {
         live: "https://example.com/aetherscale",
@@ -287,7 +287,7 @@ export const profileData: ProfileData = {
       status: "Production Live",
       featured: true,
       coverGradient: "from-amber-950/40 via-zinc-900 to-black",
-      accentColor: "#D97706",
+      accentColor: "#F6DBC0",
       tags: ["TypeScript", "Next.js", "Python", "LangGraph", "FastAPI", "VectorDB"],
       links: {
         live: "https://example.com/nexus-ai",
@@ -353,7 +353,7 @@ export const profileData: ProfileData = {
       status: "Production Live",
       featured: true,
       coverGradient: "from-red-950/50 via-zinc-900 to-black",
-      accentColor: "#C43D4D",
+      accentColor: "#935073",
       tags: ["Next.js 15", "Node.js", "Redis Edge", "PostgreSQL", "Stripe", "Tailwind"],
       links: {
         live: "https://example.com/hyperion",
@@ -419,7 +419,7 @@ export const profileData: ProfileData = {
       status: "Architecture Demo",
       featured: false,
       coverGradient: "from-emerald-950/40 via-zinc-900 to-black",
-      accentColor: "#10B981",
+      accentColor: "#B2668F",
       tags: ["TypeScript", "Rust", "WebSockets", "TimescaleDB", "WebGL", "ChartJS"],
       links: {
         live: "https://example.com/chronos",
@@ -483,7 +483,7 @@ export const profileData: ProfileData = {
       status: "Open Source",
       featured: false,
       coverGradient: "from-indigo-950/50 via-zinc-900 to-black",
-      accentColor: "#6366F1",
+      accentColor: "#502D55",
       tags: ["React 19", "TypeScript", "Tailwind", "Radix UI", "Motion", "Storybook"],
       links: {
         live: "https://example.com/vanguard",
@@ -542,7 +542,7 @@ export const profileData: ProfileData = {
       status: "Open Source",
       featured: false,
       coverGradient: "from-purple-950/40 via-zinc-900 to-black",
-      accentColor: "#A855F7",
+      accentColor: "#C48CB3",
       tags: ["Rust", "WebAssembly", "C++", "HNSW", "Vector Embeddings", "SIMD"],
       links: {
         live: "https://example.com/pulsedb",

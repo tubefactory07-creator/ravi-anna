@@ -35,7 +35,7 @@ export function PosterBackdrop({
         className="absolute inset-0 opacity-[0.18] [background-image:repeating-linear-gradient(0deg,rgba(255,255,255,0.06)_0px,rgba(255,255,255,0.06)_1px,transparent_1px,transparent_4px)]"
       />
       {children}
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#08090C]/90 via-[#08090C]/15 to-transparent" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0D0712]/90 via-[#0D0712]/15 to-transparent" />
     </div>
   );
 }
@@ -161,10 +161,10 @@ export function ProjectArt({ project, className = '' }: { project: Project; clas
 export function SeriesMark({ className = '' }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
-      <span className="relative flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-[#B72F43] to-[#711F35] font-display text-lg font-bold leading-none text-white shadow-[0_0_15px_rgba(183,47,67,0.5)]">
+      <span className="relative flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-[#935073] via-[#733B58] to-[#502D55] font-display text-lg font-bold leading-none text-[#F8F4E9] shadow-[0_0_15px_rgba(147,80,115,0.55)]">
         R
       </span>
-      <span className="font-sans text-[0.68em] font-bold tracking-[0.38em] text-[#A5A7B1]">SERIES</span>
+      <span className="font-sans text-[0.68em] font-bold tracking-[0.38em] text-[#F6DBC0]">SERIES</span>
     </span>
   );
 }

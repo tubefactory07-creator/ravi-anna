@@ -72,8 +72,8 @@ export default function Hero({
     >
       {/* Atmosphere background glows */}
       <motion.div aria-hidden className="absolute inset-0" style={{ x: glowX }}>
-        <div className="absolute right-[-10%] top-[-10%] h-[90vh] w-[80vw] rounded-full bg-[radial-gradient(closest-side,rgba(183,47,67,0.36),rgba(113,31,53,0.12)_55%,transparent)] blur-2xl lg:right-[-4%] lg:w-[60vw]" />
-        <div className="absolute bottom-[-20%] left-[-10%] h-[70vh] w-[60vw] rounded-full bg-[radial-gradient(closest-side,rgba(70,15,40,0.22),transparent)] blur-2xl" />
+        <div className="absolute right-[-10%] top-[-10%] h-[90vh] w-[80vw] rounded-full bg-[radial-gradient(closest-side,rgba(147,80,115,0.42),rgba(80,45,85,0.18)_55%,transparent)] blur-2xl lg:right-[-4%] lg:w-[60vw]" />
+        <div className="absolute bottom-[-20%] left-[-10%] h-[70vh] w-[60vw] rounded-full bg-[radial-gradient(closest-side,rgba(80,45,85,0.3),transparent)] blur-2xl" />
       </motion.div>
       <Particles className="z-[1]" />
       <div aria-hidden className="absolute inset-0 z-[1] overflow-hidden">
@@ -97,7 +97,7 @@ export default function Hero({
           {/* Rim light ring */}
           <div
             aria-hidden
-            className="absolute bottom-[8%] left-1/2 h-[78%] w-[78%] -translate-x-1/2 rounded-full border border-[#E53E55]/20 shadow-[0_0_120px_rgba(183,47,67,0.35),inset_0_0_80px_rgba(183,47,67,0.18)]"
+            className="absolute bottom-[8%] left-1/2 h-[78%] w-[78%] -translate-x-1/2 rounded-full border border-[#935073]/30 shadow-[0_0_120px_rgba(147,80,115,0.4),inset_0_0_80px_rgba(80,45,85,0.25)]"
           />
           <img
             src={profile.portrait.src}
@@ -106,8 +106,8 @@ export default function Hero({
             alt={profile.portrait.alt}
             className="absolute bottom-0 left-1/2 h-full w-auto max-w-none -translate-x-1/2 object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)] [mask-image:linear-gradient(to_bottom,black_65%,transparent_98%)]"
           />
-          {/* Crimson rim light screen overlay */}
-          <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_80%_30%,rgba(229,62,85,0.18),transparent_70%)] mix-blend-screen" />
+          {/* Violet Dusk rim light screen overlay */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_80%_30%,rgba(178,102,143,0.2),transparent_70%)] mix-blend-screen" />
 
           {/* Floating depth chips */}
           {floating.map((f, i) => (
@@ -117,9 +117,9 @@ export default function Hero({
       </motion.div>
 
       {/* Readability gradients */}
-      <div aria-hidden className="absolute inset-x-0 top-[40svh] z-[3] h-[36svh] bg-gradient-to-b from-transparent via-[#08090C]/75 to-[#08090C] lg:hidden" />
-      <div aria-hidden className="absolute inset-0 z-[3] hidden bg-[linear-gradient(90deg,#08090C_0%,rgba(8,9,12,0.72)_34%,transparent_60%)] lg:block" />
-      <div aria-hidden className="absolute inset-x-0 bottom-0 z-[3] h-48 bg-gradient-to-t from-[#08090C] to-transparent" />
+      <div aria-hidden className="absolute inset-x-0 top-[40svh] z-[3] h-[36svh] bg-gradient-to-b from-transparent via-[#0D0712]/75 to-[#0D0712] lg:hidden" />
+      <div aria-hidden className="absolute inset-0 z-[3] hidden bg-[linear-gradient(90deg,#0D0712_0%,rgba(13,7,18,0.72)_34%,transparent_60%)] lg:block" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 z-[3] h-48 bg-gradient-to-t from-[#0D0712] to-transparent" />
 
       {/* Content copy */}
       <motion.div
@@ -135,31 +135,31 @@ export default function Hero({
 
         <motion.h1
           variants={item}
-          className="font-display leading-[0.82] tracking-[0.02em] text-[#F5F5F7]"
+          className="font-display leading-[0.82] tracking-[0.02em] text-[#F8F4E9]"
           style={{ fontSize: 'clamp(4rem, 12vw, 11rem)' }}
         >
           <span className="shimmer-text">{profile.firstName}</span>
         </motion.h1>
 
-        <motion.p variants={item} className="mt-1 font-sans text-sm font-bold tracking-[0.62em] text-[#E53E55] sm:text-base">
+        <motion.p variants={item} className="mt-1 font-sans text-sm font-bold tracking-[0.62em] text-[#F6DBC0] sm:text-base">
           {profile.seriesTag}
         </motion.p>
 
-        <motion.div variants={item} className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] font-medium text-[#A5A7B1]">
-          <span className="rounded border border-white/25 px-1.5 py-px text-[10px] font-bold tracking-wider text-[#F5F5F7]">ARCHITECT</span>
+        <motion.div variants={item} className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] font-medium text-[#C7B8C4]">
+          <span className="rounded border border-white/25 px-1.5 py-px text-[10px] font-bold tracking-wider text-[#F8F4E9]">ARCHITECT</span>
           {meta.map((m, i) => (
             <span key={m} className="flex items-center gap-3">
-              {i > 0 && <span className="h-1 w-1 rounded-full bg-[#6B6D76]" />}
+              {i > 0 && <span className="h-1 w-1 rounded-full bg-[#7E6B7B]" />}
               {m}
             </span>
           ))}
         </motion.div>
 
-        <motion.p variants={item} className="mt-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#F5F5F7]/90 sm:text-xs sm:tracking-[0.34em]">
+        <motion.p variants={item} className="mt-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#F8F4E9]/90 sm:text-xs sm:tracking-[0.34em]">
           {profile.tagline.join(' • ')}
         </motion.p>
 
-        <motion.p variants={item} className="mt-4 max-w-xl text-[15px] leading-relaxed text-[#F5F5F7]/80 sm:text-base">
+        <motion.p variants={item} className="mt-4 max-w-xl text-[15px] leading-relaxed text-[#F8F4E9]/80 sm:text-base">
           {profile.intro}
         </motion.p>
 
@@ -169,7 +169,7 @@ export default function Hero({
               type="button"
               data-cursor="play"
               onClick={onPlay}
-              className="flex min-h-12 items-center gap-3 rounded-md bg-[#F5F5F7] px-6 py-3 text-[15px] font-bold text-[#08090C] transition hover:bg-white sm:px-8"
+              className="flex min-h-12 items-center gap-3 rounded-md bg-[#F8F4E9] px-6 py-3 text-[15px] font-bold text-[#0D0712] transition hover:bg-[#F6DBC0] sm:px-8"
             >
               <span className="text-lg">▶</span> Play Intro
             </button>
@@ -179,7 +179,7 @@ export default function Hero({
               <button
                 type="button"
                 onClick={onResume}
-                className="glass flex min-h-12 items-center gap-3 rounded-md px-6 py-3 text-[15px] font-semibold text-[#F5F5F7] transition hover:bg-white/15 sm:px-8"
+                className="glass flex min-h-12 items-center gap-3 rounded-md px-6 py-3 text-[15px] font-semibold text-[#F8F4E9] transition hover:bg-white/15 sm:px-8"
               >
                 <span className="text-lg">⤓</span> View Resume
               </button>
@@ -187,7 +187,7 @@ export default function Hero({
               <button
                 type="button"
                 onClick={() => scrollTo('#originals')}
-                className="glass flex min-h-12 items-center gap-3 rounded-md px-6 py-3 text-[15px] font-semibold text-[#F5F5F7] transition hover:bg-white/15 sm:px-8"
+                className="glass flex min-h-12 items-center gap-3 rounded-md px-6 py-3 text-[15px] font-semibold text-[#F8F4E9] transition hover:bg-white/15 sm:px-8"
               >
                 <span className="text-xl leading-none">＋</span> My Work
               </button>
@@ -197,14 +197,14 @@ export default function Hero({
             type="button"
             onClick={() => scrollTo('#about')}
             aria-label="More info"
-            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 text-lg text-[#F5F5F7] transition hover:border-[#F5F5F7] hover:bg-white/10"
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-white/30 text-lg text-[#F8F4E9] transition hover:border-[#F6DBC0] hover:bg-white/10"
           >
             ⓘ
           </button>
         </motion.div>
       </motion.div>
 
-      <motion.div aria-hidden className="pointer-events-none absolute inset-0 z-[5] bg-[#08090C]" style={{ opacity: blackout }} />
+      <motion.div aria-hidden className="pointer-events-none absolute inset-0 z-[5] bg-[#0D0712]" style={{ opacity: blackout }} />
     </section>
   );
 }
@@ -239,8 +239,8 @@ function FloatChip({
       transition={{ duration: 0.9, delay: 1.2 + index * 0.18, ease: EASE }}
     >
       <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 5 + index, repeat: Infinity, ease: 'easeInOut' }}>
-        <p className="text-sm font-semibold text-[#F5F5F7]">{text}</p>
-        <p className="text-[10px] uppercase tracking-[0.2em] text-[#A5A7B1]">{sub}</p>
+        <p className="text-sm font-semibold text-[#F8F4E9]">{text}</p>
+        <p className="text-[10px] uppercase tracking-[0.2em] text-[#C7B8C4]">{sub}</p>
       </motion.div>
     </motion.div>
   );

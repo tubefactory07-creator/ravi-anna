@@ -24,11 +24,11 @@ export default function FinalCTA({ onReplay }: { onReplay: () => void }) {
 
   return (
     <section id="contact" ref={ref} className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center">
-      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_60%,rgba(183,47,67,0.18),transparent_70%)]" />
+      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_60%,rgba(147,80,115,0.22),transparent_70%)]" />
       <Particles count={36} />
 
       <motion.p
-        className="relative mb-6 text-[11px] font-bold uppercase tracking-[0.5em] text-[#E53E55]"
+        className="relative mb-6 text-[11px] font-bold uppercase tracking-[0.5em] text-[#F6DBC0]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -37,7 +37,7 @@ export default function FinalCTA({ onReplay }: { onReplay: () => void }) {
       </motion.p>
 
       <motion.h2
-        className="relative font-display leading-[0.85] text-[#F5F5F7]"
+        className="relative font-display leading-[0.85] text-[#F8F4E9]"
         style={{ fontSize: 'clamp(3.4rem, 13vw, 12rem)', letterSpacing: spacing, filter: blur, opacity }}
       >
         TO BE CONTINUED…
@@ -50,8 +50,8 @@ export default function FinalCTA({ onReplay }: { onReplay: () => void }) {
         viewport={{ once: true, margin: '-10% 0px' }}
         transition={{ duration: 0.9, ease: EASE, delay: 0.2 }}
       >
-        <p className="font-sans text-2xl font-semibold tracking-[0.2em] text-[#F5F5F7] sm:text-3xl">{profile.displayName.toUpperCase()}</p>
-        <p className="mt-2 text-xs font-semibold tracking-[0.4em] text-[#A5A7B1] sm:text-sm">{profile.role.toUpperCase()}</p>
+        <p className="font-sans text-2xl font-semibold tracking-[0.2em] text-[#F8F4E9] sm:text-3xl">{profile.displayName.toUpperCase()}</p>
+        <p className="mt-2 text-xs font-semibold tracking-[0.4em] text-[#C7B8C4] sm:text-sm">{profile.role.toUpperCase()}</p>
       </motion.div>
 
       <motion.div
@@ -71,24 +71,24 @@ export default function FinalCTA({ onReplay }: { onReplay: () => void }) {
                 data-cursor={c.cursor}
                 className={`flex min-h-12 items-center gap-2 rounded-full px-7 text-sm font-bold tracking-[0.12em] transition ${
                   c.primary
-                    ? 'bg-[#B72F43] text-white shadow-[0_0_50px_rgba(183,47,67,0.5)] hover:bg-[#E53E55]'
-                    : 'border border-white/25 text-[#F5F5F7] hover:border-[#F5F5F7] hover:bg-white/10'
+                    ? 'bg-[#935073] text-[#F8F4E9] shadow-[0_0_50px_rgba(147,80,115,0.55)] hover:bg-[#B2668F]'
+                    : 'border border-white/25 text-[#F8F4E9] hover:border-[#F6DBC0] hover:bg-white/10'
                 }`}
               >
                 {c.primary && <span>▶</span>}
                 {c.label.toUpperCase()}
-                {!c.primary && <span className="text-[#A5A7B1]">↗</span>}
+                {!c.primary && <span className="text-[#C7B8C4]">↗</span>}
               </a>
             </Magnetic>
           </motion.div>
         ))}
       </motion.div>
 
-      <div className="relative mt-16 flex flex-wrap justify-center gap-6 text-xs font-semibold tracking-[0.24em] text-[#6B6D76]">
-        <button type="button" onClick={() => scrollTo(0, { offset: 0 })} className="hover:text-[#F5F5F7]">
+      <div className="relative mt-16 flex flex-wrap justify-center gap-6 text-xs font-semibold tracking-[0.24em] text-[#7E6B7B]">
+        <button type="button" onClick={() => scrollTo(0, { offset: 0 })} className="hover:text-[#F8F4E9]">
           ↺ WATCH AGAIN
         </button>
-        <button type="button" onClick={onReplay} className="hover:text-[#F5F5F7]">
+        <button type="button" onClick={onReplay} className="hover:text-[#F8F4E9]">
           ▶ REPLAY OPENING
         </button>
       </div>
@@ -97,7 +97,7 @@ export default function FinalCTA({ onReplay }: { onReplay: () => void }) {
         <div className="mb-2 text-base">
           <SeriesMark />
         </div>
-        <p className="text-[11px] leading-relaxed text-[#6B6D76]">
+        <p className="text-[11px] leading-relaxed text-[#7E6B7B]">
           © {new Date().getFullYear()} {profile.displayName}. A personal, streaming-inspired portfolio — not affiliated with any streaming service.
         </p>
       </footer>

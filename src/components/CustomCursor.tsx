@@ -66,8 +66,8 @@ export default function CustomCursor() {
         height: size,
         opacity: visible ? 1 : 0,
         scale: down ? 0.85 : 1,
-        backgroundColor: label ? 'rgba(183,47,67,0.92)' : hoverLink ? 'rgba(245,245,247,0.08)' : 'rgba(245,245,247,1)',
-        borderColor: hoverLink && !label ? 'rgba(245,245,247,0.7)' : 'rgba(245,245,247,0)',
+        backgroundColor: label ? 'rgba(147,80,115,0.95)' : hoverLink ? 'rgba(248,244,233,0.08)' : 'rgba(248,244,233,1)',
+        borderColor: hoverLink && !label ? 'rgba(248,244,233,0.7)' : 'rgba(248,244,233,0)',
       }}
       transition={{ type: 'spring', stiffness: 420, damping: 30 }}
     >
@@ -79,7 +79,7 @@ export default function CustomCursor() {
             initial={{ opacity: 0, scale: 0.6 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.6 }}
-            className="font-sans text-[11px] font-bold tracking-[0.18em] text-white"
+            className="font-sans text-[11px] font-bold tracking-[0.18em] text-[#F8F4E9]"
           >
             {label}
           </motion.span>

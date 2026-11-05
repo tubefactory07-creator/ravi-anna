@@ -25,7 +25,7 @@ export default function TopPicks() {
             >
               <span
                 aria-hidden
-                className="text-outline -mr-6 select-none font-display leading-[0.78] transition duration-500 group-hover:[-webkit-text-stroke-color:rgba(229,62,85,0.85)] sm:-mr-8"
+                className="text-outline -mr-6 select-none font-display leading-[0.78] transition duration-500 group-hover:[-webkit-text-stroke-color:rgba(178,102,143,0.9)] sm:-mr-8"
                 style={{
                   fontSize: i === 9 ? 'clamp(9rem, 22vw, 15rem)' : 'clamp(11rem, 26vw, 19rem)',
                   letterSpacing: i === 9 ? '-0.06em' : 0,
@@ -38,10 +38,10 @@ export default function TopPicks() {
                   <PosterBackdrop palette={pick.palette} />
                 </div>
                 <div className="absolute inset-0 flex flex-col justify-between p-3.5">
-                  <span className="text-[9px] font-bold uppercase tracking-[0.26em] text-[#F5F5F7]/70">{pick.label}</span>
+                  <span className="text-[9px] font-bold uppercase tracking-[0.26em] text-[#F8F4E9]/70">{pick.label}</span>
                   <div>
-                    <p className="font-display text-[1.75rem] leading-[0.92] tracking-wide text-[#F5F5F7]">{pick.title}</p>
-                    <p className="mt-1.5 text-[11px] leading-snug text-[#A5A7B1]">{pick.detail}</p>
+                    <p className="font-display text-[1.75rem] leading-[0.92] tracking-wide text-[#F8F4E9]">{pick.title}</p>
+                    <p className="mt-1.5 text-[11px] leading-snug text-[#C7B8C4]">{pick.detail}</p>
                   </div>
                 </div>
               </div>

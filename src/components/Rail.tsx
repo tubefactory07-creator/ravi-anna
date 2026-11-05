@@ -29,7 +29,7 @@ export function RailButtons({ rail }: { rail: RefObject<HTMLDivElement | null> }
   };
 
   const base =
-    'absolute top-8 bottom-8 z-20 hidden w-[var(--gutter)] min-w-10 items-center justify-center bg-gradient-to-r text-3xl text-[#F5F5F7] opacity-0 transition duration-300 group-hover/rail:opacity-100 hover:text-white [@media(hover:hover)]:flex';
+    'absolute top-8 bottom-8 z-20 hidden w-[var(--gutter)] min-w-10 items-center justify-center bg-gradient-to-r text-3xl text-[#F8F4E9] opacity-0 transition duration-300 group-hover/rail:opacity-100 hover:text-[#F6DBC0] [@media(hover:hover)]:flex';
 
   return (
     <>
@@ -38,7 +38,7 @@ export function RailButtons({ rail }: { rail: RefObject<HTMLDivElement | null> }
           type="button"
           aria-label="Scroll left"
           onClick={() => page(-1)}
-          className={`${base} left-0 from-[#08090C]/90 to-transparent`}
+          className={`${base} left-0 from-[#0D0712]/90 to-transparent`}
         >
           ‹
         </button>
@@ -48,7 +48,7 @@ export function RailButtons({ rail }: { rail: RefObject<HTMLDivElement | null> }
           type="button"
           aria-label="Scroll right"
           onClick={() => page(1)}
-          className={`${base} right-0 from-transparent to-[#08090C]/90`}
+          className={`${base} right-0 from-transparent to-[#0D0712]/90`}
         >
           ›
         </button>
