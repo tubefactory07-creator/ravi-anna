@@ -45,6 +45,17 @@ export const metadata: Metadata = {
     description:
       "Senior Administration Executive & Operations Specialist. 8+ years driving ERP deployment, facilities governance, vendor procurement, and executive MIS reporting.",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+  },
   robots: {
     index: true,
     follow: true,

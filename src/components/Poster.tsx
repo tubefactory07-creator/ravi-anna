@@ -161,8 +161,8 @@ export function ProjectArt({ project, className = '' }: { project: Project; clas
 export function SeriesMark({ className = '' }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
-      <span className="relative flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-[#935073] via-[#733B58] to-[#502D55] font-display text-lg font-bold leading-none text-[#F8F4E9] shadow-[0_0_15px_rgba(147,80,115,0.55)]">
-        R
+      <span className="relative flex h-7 w-7 items-center justify-center overflow-hidden rounded-md bg-gradient-to-br from-[#935073] via-[#733B58] to-[#502D55] shadow-[0_0_15px_rgba(147,80,115,0.55)]">
+        <img src="/assets/r-glyph.png" alt="R" className="h-[18px] w-auto object-contain drop-shadow" />
       </span>
       <span className="font-sans text-[0.68em] font-bold tracking-[0.38em] text-[#F6DBC0]">SERIES</span>
     </span>
