@@ -7,9 +7,9 @@ import { EASE, SectionHeading, Tilt } from './fx';
 export default function About() {
   const facts = [
     { k: 'Current Role', v: experience[0].role, s: experience[0].company },
-    { k: 'Focus Area', v: 'Operations & ERP Systems', s: 'Office Administration & Process Optimization' },
-    { k: 'Core Domains', v: 'ERP & MIS Governance', s: 'Implementation, Hypercare & Executive Support' },
-    { k: 'Based in', v: profile.location, s: 'Executive Administration Leadership' },
+    { k: 'Total Experience', v: profile.experienceYears, s: 'Office Administration & Operations' },
+    { k: 'Education', v: education[0].degree, s: education[0].school },
+    { k: 'Languages Known', v: profile.languages.join(', '), s: `DOB: ${profile.dob}` },
   ];
 
   return (
@@ -82,11 +82,11 @@ export default function About() {
           </motion.dl>
 
           <div className="mt-8">
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.28em] text-[#7E6B7B]">Professional Focus & Specializations</p>
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.28em] text-[#7E6B7B]">Key Strengths & Core Pillars</p>
             <div className="flex flex-wrap gap-2">
-              {profile.interests.map((i) => (
-                <span key={i} className="glass rounded-full px-3 py-1.5 text-xs font-medium text-[#F8F4E9]">
-                  {i}
+              {profile.keyStrengths.map((k) => (
+                <span key={k} className="glass rounded-full px-3 py-1.5 text-xs font-medium text-[#F8F4E9]">
+                  {k}
                 </span>
               ))}
             </div>

@@ -98,6 +98,12 @@ export function ResumeSheet() {
           <p className="text-[10px] font-bold tracking-[0.34em] text-[#7E6B7B]">STARRING</p>
           <h3 className="mt-1 font-display text-[clamp(1.9rem,4.4vw,3.2rem)] leading-[0.9] tracking-wide text-[#F8F4E9]">{profile.fullName}</h3>
           <p className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#F6DBC0]">{profile.role}</p>
+          <div className="mt-3 flex flex-wrap gap-2 text-[11px] text-[#C7B8C4]">
+            <span className="rounded bg-white/5 px-2 py-0.5 ring-1 ring-white/10">DOB: {profile.dob}</span>
+            <span className="rounded bg-white/5 px-2 py-0.5 ring-1 ring-white/10">Exp: {profile.experienceYears}</span>
+            <span className="rounded bg-white/5 px-2 py-0.5 ring-1 ring-white/10">Languages: {profile.languages.join(', ')}</span>
+            <span className="rounded bg-white/5 px-2 py-0.5 ring-1 ring-white/10">{profile.location}</span>
+          </div>
         </div>
         <div className="text-xs leading-relaxed text-[#C7B8C4] sm:text-right">
           <a href={`mailto:${profile.email}`} className="block hover:text-[#F8F4E9]">
@@ -111,6 +117,26 @@ export function ResumeSheet() {
           </a>
         </div>
       </header>
+
+      {/* Professional Summary */}
+      <div className="mb-8 rounded-xl bg-white/[0.03] p-5 ring-1 ring-white/10">
+        <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#B2668F]">Professional Summary</p>
+        <p className="mt-2 text-xs leading-relaxed text-[#C7B8C4] sm:text-sm">
+          {profile.intro}
+        </p>
+      </div>
+
+      {/* Key Strengths */}
+      <div className="mb-8">
+        <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.28em] text-[#B2668F]">Key Strengths</p>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          {profile.keyStrengths.map((k) => (
+            <div key={k} className="rounded-lg bg-black/40 p-3 text-xs font-medium text-[#F8F4E9]/90 ring-1 ring-white/10">
+              {k}
+            </div>
+          ))}
+        </div>
+      </div>
 
       <div className="grid gap-x-10 md:grid-cols-[1.4fr_1fr]">
         <div>
@@ -180,6 +206,16 @@ export function ResumeSheet() {
               </li>
             ))}
           </ul>
+
+          <H>Core Skills Breakdown</H>
+          <div className="space-y-3">
+            {profile.coreSkills.map((c) => (
+              <div key={c.category} className="rounded-lg bg-black/25 p-2.5 text-xs ring-1 ring-white/5">
+                <p className="font-semibold text-[#F8F4E9]">{c.category}</p>
+                <p className="mt-0.5 text-[#C7B8C4]">{c.details}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </article>
