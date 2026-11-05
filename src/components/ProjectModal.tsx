@@ -159,7 +159,7 @@ export default function ProjectModal({
             {/* Contribution points & Tech stack */}
             <div className="mt-12 grid gap-10 lg:grid-cols-[3fr_2fr]">
               <motion.section variants={block}>
-                <h3 className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-[#B2668F]">Architecture & Contribution</h3>
+                <h3 className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-[#B2668F]">Strategy & Execution</h3>
                 <ul className="space-y-4">
                   {project.build.map((b) => (
                     <li key={b} className="flex gap-3 text-[15px] leading-relaxed text-[#F8F4E9]/85">
@@ -180,7 +180,7 @@ export default function ProjectModal({
                   ))}
                 </ul>
 
-                <h3 className="mb-3 mt-8 text-[11px] font-bold uppercase tracking-[0.3em] text-[#B2668F]">Technologies</h3>
+                <h3 className="mb-3 mt-8 text-[11px] font-bold uppercase tracking-[0.3em] text-[#B2668F]">Systems & Tools</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.stack.map((t) => (
                     <span key={t} className="glass rounded-full px-3 py-1 text-xs font-semibold text-[#F8F4E9]">

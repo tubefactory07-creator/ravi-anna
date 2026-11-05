@@ -6,10 +6,10 @@ import { EASE, SectionHeading, Tilt } from './fx';
 
 export default function About() {
   const facts = [
-    { k: 'Current Role', v: experience[0].role.split('&')[0].trim(), s: experience[0].company },
-    { k: 'Focus Area', v: 'Distributed Systems & AI', s: 'High-throughput event streaming & agent DAGs' },
-    { k: 'Primary Stack', v: 'Go · Rust · TypeScript', s: 'with Kafka, ClickHouse & Next.js' },
-    { k: 'Based in', v: profile.location, s: 'Global Architecture Leadership' },
+    { k: 'Current Role', v: experience[0].role, s: experience[0].company },
+    { k: 'Focus Area', v: 'Operations & ERP Systems', s: 'Office Administration & Process Optimization' },
+    { k: 'Core Domains', v: 'ERP & MIS Governance', s: 'Implementation, Hypercare & Executive Support' },
+    { k: 'Based in', v: profile.location, s: 'Executive Administration Leadership' },
   ];
 
   return (
@@ -42,7 +42,7 @@ export default function About() {
                   <p className="text-[10px] font-bold tracking-[0.3em] text-[#F6DBC0]">STARRING</p>
                   <p className="font-display text-3xl leading-none text-[#F8F4E9]">{profile.displayName}</p>
                 </div>
-                <span className="rounded border border-white/30 px-1.5 text-[10px] font-bold text-[#F8F4E9]">S01–S05</span>
+                <span className="rounded border border-white/30 px-1.5 text-[10px] font-bold text-[#F8F4E9]">S01–S03</span>
               </div>
             </div>
           </Tilt>
@@ -82,7 +82,7 @@ export default function About() {
           </motion.dl>
 
           <div className="mt-8">
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.28em] text-[#7E6B7B]">Technical Research & Interests</p>
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.28em] text-[#7E6B7B]">Professional Focus & Specializations</p>
             <div className="flex flex-wrap gap-2">
               {profile.interests.map((i) => (
                 <span key={i} className="glass rounded-full px-3 py-1.5 text-xs font-medium text-[#F8F4E9]">

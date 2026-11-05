@@ -24,7 +24,7 @@ export default function ResumeSection({ onView }: { onView: () => void }) {
         <div className="lg:sticky lg:top-28 lg:self-start">
           <p className="font-serif text-3xl italic leading-tight text-[#F8F4E9]">Every episode, on one page.</p>
           <p className="mt-3 text-sm leading-relaxed text-[#C7B8C4]">
-            Experience, distributed architectures, {projects.length} Originals, squad leadership, and {certifications.length} verified certifications — view it here or take a copy with you.
+            Over 8 years of executive administration, enterprise ERP implementations, {projects.length} strategic initiatives, and certified competencies — view it here or take a copy with you.
           </p>
           <div className="mt-6 flex flex-col gap-3">
             <Magnetic className="w-full">
@@ -50,8 +50,8 @@ export default function ResumeSection({ onView }: { onView: () => void }) {
           </div>
           <dl className="mt-8 grid grid-cols-3 gap-px overflow-hidden rounded-xl bg-white/10 text-center">
             {[
-              { v: '10+', k: 'Yrs Craft' },
-              { v: String(projects.length), k: 'Originals' },
+              { v: '8+', k: 'Yrs Exp' },
+              { v: String(projects.length), k: 'Case Studies' },
               { v: String(certifications.length), k: 'Certs' },
             ].map((s) => (
               <div key={s.k} className="bg-[#170D1E] px-2 py-4">
@@ -103,12 +103,11 @@ export function ResumeSheet() {
           <a href={`mailto:${profile.email}`} className="block hover:text-[#F8F4E9]">
             {profile.email}
           </a>
+          <a href={profile.links.phone} className="block hover:text-[#F8F4E9]">
+            {profile.phone}
+          </a>
           <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="hover:text-[#F8F4E9]">
             LinkedIn ↗
-          </a>
-          {' · '}
-          <a href={profile.links.github} target="_blank" rel="noreferrer" className="hover:text-[#F8F4E9]">
-            GitHub ↗
           </a>
         </div>
       </header>
@@ -136,7 +135,7 @@ export function ResumeSheet() {
             </div>
           ))}
 
-          <H>Featured Productions</H>
+          <H>Strategic Case Studies</H>
           {projects.map((p) => (
             <div key={p.id} className="mb-4">
               <div className="flex items-center justify-between">

@@ -16,9 +16,9 @@ export default function FinalCTA({ onReplay }: { onReplay: () => void }) {
   const opacity = useTransform(scrollYProgress, [0.1, 0.9], [0, 1]);
 
   const ctas = [
-    { label: "Let's Build", href: `mailto:${profile.email}?subject=${encodeURIComponent("Let's build something extraordinary")}`, primary: true, cursor: 'play' },
+    { label: "Get in Touch", href: `mailto:${profile.email}?subject=${encodeURIComponent("Executive Leadership Opportunity - Ravirajan P")}`, primary: true, cursor: 'play' },
+    { label: 'Call Directly', href: profile.links.phone, cursor: 'link' },
     { label: 'LinkedIn', href: profile.links.linkedin, cursor: 'link' },
-    { label: 'GitHub', href: profile.links.github, cursor: 'link' },
     { label: 'Email', href: `mailto:${profile.email}`, cursor: 'link' },
   ];
 

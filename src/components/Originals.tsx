@@ -21,11 +21,11 @@ function Intro() {
   return (
     <div className="flex w-full shrink-0 flex-col justify-center lg:w-[34vw]">
       <p className="mb-3 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#B2668F]">
-        <span className="h-px w-8 bg-[#B2668F]" /> {projects.length} Productions · 2024–2026
+        <span className="h-px w-8 bg-[#B2668F]" /> {projects.length} Case Studies · 2018–2026
       </p>
       <RevealText as="h2" text="ORIGINALS" className="font-display text-[clamp(3.5rem,9vw,8rem)] leading-[0.85] text-[#F8F4E9]" />
       <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-[#C7B8C4]">
-        Five production systems — distributed streaming, multi-agent AI, global edge retail, GPU financial charting, and embedded vectors. Select any title for the complete architecture.
+        Five enterprise operational case studies — ERP rollout, facilities governance, automated MIS analytics, CRM client relationship management, and corporate SOP process optimization. Select any title for the complete operational breakdown.
       </p>
       <p className="mt-6 hidden text-xs tracking-[0.24em] text-[#7E6B7B] lg:block">SCROLL TO BROWSE →</p>
     </div>
@@ -35,7 +35,7 @@ function Intro() {
 function Outro() {
   return (
     <a
-      href={profile.links.github}
+      href={profile.links.linkedin}
       target="_blank"
       rel="noreferrer"
       data-cursor="link"
@@ -44,8 +44,8 @@ function Outro() {
       <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/25 text-2xl text-[#F8F4E9] transition group-hover:scale-110 group-hover:border-[#B2668F] group-hover:text-[#B2668F]">
         ↗
       </span>
-      <span className="font-display text-3xl tracking-wide text-[#F8F4E9]">More on GitHub</span>
-      <span className="text-xs text-[#C7B8C4]">github.com/ravi-rajan</span>
+      <span className="font-display text-3xl tracking-wide text-[#F8F4E9]">Connect on LinkedIn</span>
+      <span className="text-xs text-[#C7B8C4]">Executive Network · Ravirajan P</span>
     </a>
   );
 }

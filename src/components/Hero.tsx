@@ -47,16 +47,16 @@ export default function Hero({
   const glowX = useTransform(px, [-1, 1], ['-6%', '6%']);
 
   const meta = [
-    '10+ Yrs Craft',
-    'Principal Architect',
-    `${projects.length} Originals`,
-    `${certifications.length} Certifications`,
+    '8+ Yrs Experience',
+    'Senior Administration Executive',
+    `${projects.length} Case Studies`,
+    `${certifications.length} Credentials`,
   ];
 
   const floating = [
     { text: achievements[0].title, sub: achievements[0].org, pos: 'left-[2%] top-[30%]', depth: 1 },
     { text: certifications[0].name.split(' – ')[0], sub: certifications[0].issuer, pos: 'right-[0%] top-[18%]', depth: -1 },
-    { text: 'Go · Rust · TypeScript', sub: 'Primary Stack', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
+    { text: 'ERP · MIS · Operations', sub: 'Core Domains', pos: 'right-[4%] bottom-[24%]', depth: 0.6 },
   ];
 
   return (
@@ -146,7 +146,7 @@ export default function Hero({
         </motion.p>
 
         <motion.div variants={item} className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px] font-medium text-[#C7B8C4]">
-          <span className="rounded border border-white/25 px-1.5 py-px text-[10px] font-bold tracking-wider text-[#F8F4E9]">ARCHITECT</span>
+          <span className="rounded border border-white/25 px-1.5 py-px text-[10px] font-bold tracking-wider text-[#F8F4E9]">EXECUTIVE</span>
           {meta.map((m, i) => (
             <span key={m} className="flex items-center gap-3">
               {i > 0 && <span className="h-1 w-1 rounded-full bg-[#7E6B7B]" />}
